@@ -1,22 +1,30 @@
-import { styled, Box } from "@mui/material";
+import { styled, Box, Toolbar } from "@mui/material";
 import logo from './logo.png';
 
+const Head = styled(Toolbar)`
+  position: sticky;
+  top: 0;
+  background-color: #EC3237;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+`;
+
 const Image = styled(Box)`
-    text-align: center;
-    height: 20%;
-    @media (max-width: 768px) {
-        padding: 0 10px;
-      }
+  align-self: flex-start; /* Align the content to the top */
+`;
+
+const LogoImage = styled('img')`
+  height: 100px; /* Set the height of the image */
 `;
 
 const Header = () => {
-    return (
-        <div>
-            <Image>
-                <img src={logo} alt="logo" style={{height:150}}/>
-            </Image>
-        </div>
-    );
+  return (
+    <Head>
+      <Image>
+        <LogoImage src={logo} alt="logo" />
+      </Image>
+    </Head>
+  );
 };
 
 export default Header;

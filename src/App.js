@@ -9,7 +9,6 @@ import styled from '@emotion/styled';
 
 const HeaderContainer = styled(Box)`
     background: linear-gradient(to bottom, #fffff5, #fff9bb); /* Gradient colors */
-    padding: 20px; /* Add padding for spacing */
 `;
 
 function App() {
