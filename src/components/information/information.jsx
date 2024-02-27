@@ -26,6 +26,11 @@ const Line = styled(Box)`
         padding: 0 10px;
       }
 `
+const lineStyle = {
+    width: '93%',
+    margin: '20px 0',
+    border: '1px solid #E0413E'
+  };
 
 const Information = () =>{
 
@@ -43,7 +48,7 @@ const Information = () =>{
                 Valves - Pumps - Pipes - IoT Drives & Controllers - Wires & Cables - Solar Systems - Motors 
             </Valves>
             <Line>
-                <img src={line} alt="logo" style={{height:10, width:1300}}/>
+                <hr style={lineStyle} />
             </Line>
         </div>
     )
