@@ -4,6 +4,7 @@ import { Box,Toolbar } from "@mui/material";
 import CallRoundedIcon from '@mui/icons-material/CallRounded';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
+import Quicklinks from "../quicklinks/quicklinks";
 
 
 const Base = styled(Box)`
@@ -48,7 +49,7 @@ const Footer = () =>{
         <div>
             <Base>
                 <h4>C.R.I. FLUID SYSTEMS PRODUCTS CATER TO DIVERSE SEGMENTS</h4>
-                CHEMICALS & PROCESS POWER WATER & WASTE WATER OILS & GAS PHARMA SUGARS & DISTILLERIES PAPER & PULP MARINE & DEFENCE METAL & MINING FOOD & BEVERAGE PETROCHEMICAL & REFINERIES SOLAR BUILDING HVAC FIRE FIGHTING AGRICULTURE & RESIDENTIAL
+                <Quicklinks/>
             </Base>
             <BaseImage>
                 <Redbar style={{paddingLeft:170}}>
@@ -64,7 +65,7 @@ const Footer = () =>{
                     </span>
                     <span>&nbsp;</span>
                     <span>&nbsp;</span>
-                    <a href="https://www.facebook.com/groups/164434714165016" style={{color:"white"}} target="_blank" rel="noopener noreferrer">www.facebook.com/cripumps</a> 
+                    <a href="https://www.facebook.com/groups/164434714165016" style={{color:"white"}} target="_blank" rel="noopener noreferrer">www.facebook.com/cripumps</a>
                     <span style={{paddingLeft:250}}>
                         <LanguageRoundedIcon/>  
                     </span>
