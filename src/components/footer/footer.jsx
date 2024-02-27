@@ -8,6 +8,9 @@ import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 
 const Base = styled(Box)`
  text-align:center;
+ padding-left:1rem;
+ padding-right:1rem;
+ font-family: Georgia, serif;
 `;
 
 const Redbar = styled(Toolbar)`
@@ -15,13 +18,30 @@ const Redbar = styled(Toolbar)`
     height:60px;
     align-items:center;
     color:white;
+ font-family: Georgia, serif;
+
 `
+const tollFreeNumber = "1-800-200-1234";
+
+
+    const generateSearchUrl = (number) => {
+
+        const searchQuery = encodeURIComponent(number);
+        return  `https://www.google.com/search?q=${searchQuery}`;
+      
+    };
+    const handleClick = () => {
+        const searchUrl = generateSearchUrl(tollFreeNumber);
+        window.open(searchUrl, '_blank'); // Open search URL in a new tab
+      };
 
 const BaseImage = styled(Box)`
 padding-left:6px;
 padding-right:5px;
 padding-top:25px;
 `
+
+
 
 const Footer = () =>{
     return(
@@ -33,21 +53,24 @@ const Footer = () =>{
             <BaseImage>
                 <Redbar style={{paddingLeft:170}}>
                     <CallRoundedIcon/>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    Toll free 1800 200 1234
+                        &nbsp;      
+                        &nbsp;      
+                    Toll free &nbsp;
+                    <p onClick={handleClick} style={{ cursor: 'pointer', fontWeight:600 }}>
+                        {tollFreeNumber}
+                    </p>
                     <span style={{paddingLeft:250}}>
                         <FacebookRoundedIcon/>
                     </span>
                     <span>&nbsp;</span>
                     <span>&nbsp;</span>
-                    <a href="www.facebook.com/cripumps" style={{color:"white"}}>www.facebook.com/cripumps</a> 
+                    <a href="https://www.facebook.com/groups/164434714165016" style={{color:"white"}} target="_blank" rel="noopener noreferrer">www.facebook.com/cripumps</a> 
                     <span style={{paddingLeft:250}}>
                         <LanguageRoundedIcon/>  
                     </span>
                     <span>&nbsp;</span>
                     <span>&nbsp;</span>
-                    <a href="www.crigroups.com" style={{color:"white"}}>www.crigroups.com</a> 
+                    <a href="https://www.crifluidsystems.com/50/" style={{color:"white"}} target="_blank" rel="noopener noreferrer">www.crigroups.com</a> 
                 </Redbar>
             </BaseImage>
         </div>
