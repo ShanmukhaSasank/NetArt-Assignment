@@ -54,6 +54,7 @@ const Footer = () => {
         <h4>C.R.I. FLUID SYSTEMS PRODUCTS CATER TO DIVERSE SEGMENTS</h4>
         <Quicklinks />
       </Base>
+      &nbsp;
       <Redbar>
         <CallRoundedIcon />
         <span>&nbsp;Toll free&nbsp;</span>
