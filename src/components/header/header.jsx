@@ -7,7 +7,6 @@ const Head = styled(Toolbar)`
   background-color: #EC3237;
   display: flex;
   justify-content: center; /* Center the content horizontally */
-  height: 7.0rem;
 `;
 
 const Image = styled(Box)`
@@ -15,7 +14,7 @@ const Image = styled(Box)`
 `;
 
 const LogoImage = styled('img')`
-  height: 7.5rem; /* Set the height of the image */
+  height: 15vh; /* Set the height of the image as a percentage of viewport height */
 `;
 
 const Header = () => {
@@ -23,7 +22,7 @@ const Header = () => {
     <Head>
       <Image>
         <a href="https://www.crifluidsystems.com/50/" target="_blank" rel="noopener noreferrer">
-        <LogoImage src={logo} alt="logo" />
+          <LogoImage src={logo} alt="logo" />
         </a>
       </Image>
     </Head>
