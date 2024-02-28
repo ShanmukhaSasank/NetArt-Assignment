@@ -25,9 +25,14 @@ const Redbar = styled(Toolbar)`
 
 const ContactInfo = styled(Box)`
   display: flex;
-  align-items: center;
-  margin-left:15rem;
-  margin-right:15rem
+  align-items: center;  
+  margin-left:15px; /* Adjusted margin */
+  margin-right:15px; /* Adjusted margin */
+`;
+
+const Accordion = styled(Box)`
+  display: flex;
+  align-items: center; /* Align items vertically */
 `;
 
 const tollFreeNumber = "1-800-200-1234";
@@ -50,19 +55,21 @@ const Footer = () => {
         <Quicklinks />
       </Base>
       <Redbar>
-          <CallRoundedIcon />
-          <span>&nbsp;Toll free&nbsp;</span>
-          <p onClick={handleClick} style={{ cursor: 'pointer', fontWeight: 600}}>
-            {tollFreeNumber}
-          </p>
+        <CallRoundedIcon />
+        <span>&nbsp;Toll free&nbsp;</span>
+        <p onClick={handleClick} style={{ cursor: 'pointer', fontWeight: 600 }}>
+          {tollFreeNumber}
+        </p>
         <ContactInfo>
           <FacebookRoundedIcon />
           <a href="https://www.facebook.com/groups/164434714165016" style={{ color: "white", marginLeft: '0.5rem' }} target="_blank" rel="noopener noreferrer">www.facebook.com/cripumps</a>
         </ContactInfo>
-        <LanguageRoundedIcon />
-        <p>
-            <a href="https://www.crifluidsystems.com/50/" style={{ color: "white", marginLeft: '0.5rem' }} target="_blank" rel="noopener noreferrer">www.crigroups.com</a>
-        </p>
+        <Accordion>
+          <LanguageRoundedIcon sx={{ marginRight: '0.5rem'}}/>
+          <p style={{ margin: 0 }}>
+            <a href="https://www.crifluidsystems.com/50/" style={{ color: "white"}} target="_blank" rel="noopener noreferrer">www.crigroups.com</a>
+          </p>
+        </Accordion>
       </Redbar>
     </div>
   )
